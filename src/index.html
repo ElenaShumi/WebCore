@@ -10,7 +10,191 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 4 starter </h3>
+    <header class="header">
+      <div class="header__menu menu">
+          <div class="menu__group-button">
+              <button class="button button--burger"></button>
+          </div>
+          <div class="menu__logo">
+              <a href="#"><img src="img/Group.svg" alt="Логотип"></a>
+          </div>
+          <div class="menu__group-button menu__group-button--visible-768">
+              <button class="button button--call"></button>
+              <button class="button button--chat"></button>
+              <button class="button button--profile"></button>
+          </div>
+          <div class="menu__group-button menu__group-button--visible-1120">
+              <button class="button button--repair">
+                  <span class="button__caption">Оставить заявку</span>
+              </button>
+              <button class="button button--checkstatus">
+                  <span class="button__caption">Статус ремонта</span>
+              </button>
+           </div>
+      </div>       
+    </header>
+    <main class="main-page">
+     <div class="main-page__title">
+      <h1>Услуги и сервисы</h1>
+     </div>
+     <nav class="main-page__menu">
+          <ul class="slide-menu">
+              <li  class="slide-menu__items"><a class="slide-menu__link slide-menu__link--selected" href="">Ремонтируемые устройства</a></li>
+              <li class="slide-menu__items"><a class="slide-menu__link"  href="">Дополнительные услуги</a></li>
+              <li class="slide-menu__items"><a class="slide-menu__link" href="">Цены на услуги</a></li>
+              <li class="slide-menu__items"><a class="slide-menu__link" href="">Адреса сервисных центров</a></li>
+              <li class="slide-menu__items"><a class="slide-menu__link" href="">Специальные цены</a></li>
+              <li class="slide-menu__items"><a class="slide-menu__link" href="">Отзывы</a></li>
+          </ul>
+      </nav>
+     <div class="main-page__first-block first-block">
+       <div class="first-block__column1">
+          <div class="first-block__about">
+              <p class="first-block__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+              <p class="first-block__text">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+          </div>
+          <button class="first-block__button">
+          <span>Читать далее</span>
+          </button>
+       </div>
+       <img class="first-block__image" src="img/Picture.jpg" alt="Логотип и время работы">
+     </div>
+    </main>
+    <section class="brands">
+      <div class="brands__header">
+        <h2 class="brands__title">Ремонт техники различных брендов</h2>
+      </div>
+      <div class="brands__slider swiper-container">
+          <ul class="brands__menu menu-brand swiper-wrapper">
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/Lenovo.png" alt="Lenovo" class="menu-brand__image">
+                  </a>
+                  
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/samsung.png" alt="samsung" class="menu-brand__image">
+                  </a>
+                  
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/apple.png" alt="apple" class="menu-brand__image">
+                  </a>
+                  
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/ViewSonic.png" alt="ViewSonic" class="menu-brand__image">
+                  </a>
+                  
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/bosch.png" alt="bosch" class="menu-brand__image">
+                  </a>
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/hp.png" alt="hp" class="menu-brand__image">
+                  </a>
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/acer.png" alt="acer" class="menu-brand__image">
+                  </a>
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/sony.png" alt="sony" class="menu-brand__image">
+                  </a>
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/hp.png" alt="hp" class="menu-brand__image">
+                  </a>
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/acer.png" alt="acer" class="menu-brand__image">
+                  </a>
+              </li>
+              <li class="menu-brand__item swiper-slide">
+                  <a href="#" class="menu-brand__link">
+                      <img src="img/sony.png" alt="sony" class="menu-brand__image">
+                  </a>
+              </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+      </div>
+      <button class="brands__button" type="button">
+          <span>Показать все</span>
+      </button>
+    </section>
+    <aside class="mobile-menu">
+      <div class="header-menu">
+          <div class="header-menu__button">
+              <button class="icon-button icon-button--burger"></button>
+          </div>
+          <div class="header-menu__logo">
+              <a href="#"><img src="img/Group.svg" alt="Логотип"></a>
+          </div>
+          <div class="header-menu__button">
+              <button class="icon-button icon-button--search"></button>
+          </div>
+      </div>
+      <div class="main-page">
+          <nav class="main-page__main-menu">
+              <ul class="main-menu">
+                  <li class="main-menu__items main-menu__items--active">
+                      <a class="main-menu__link main-menu__link--active" href="#">Ремонт техники</a>
+                  </li>
+                  <li class="main-menu__items">
+                      <a class="main-menu__link" href="#">Услуги и сервисы</a>
+                  </li>
+                  <li class="main-menu__items">
+                      <a class="main-menu__link" href="#">Корпоративным клиентам</a>
+                  </li>
+                  <li class="main-menu__items">
+                      <a class="main-menu__link" href="#">Продавцам техники</a>
+                  </li>
+                  <li class="main-menu__items">
+                      <a class="main-menu__link" href="#">Партнерам</a>
+                  </li>
+                  <li class="main-menu__items">
+                      <a class="main-menu__link" href="#">Производителям</a>
+                  </li>
+                  <li class="main-menu__items">
+                      <a class="main-menu__link" href="#">Наши сервисные центры</a>
+                  </li>
+                  <li class="main-menu__items">
+                      <a class="main-menu__link" href="#">Контакты</a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+      <div class="footer-menu">
+          <div class="footer-menu__contact contact">
+              <div class="contact__button-group button-group">
+                  <button class="button-group__icon-button icon-button icon-button--call"></button>
+                  <button class="button-group__icon-button icon-button icon-button--chat"></button>
+                  <button class="button-group__icon-button icon-button icon-button--profile"></button>
+              </div>
+              <div class="contact__mail mail">
+                  <a class="mail-link" href="mailto:mail@cps.com">mail@cps.com</a> 
+              </div>
+              <div class="contact__phone phone">
+                  <a class="phone-link" href="tel:+78008908900">8 800 890 8900</a>
+              </div>
+          </div>
+          <div class="footer-menu__lang lang">
+              <button class="lang__button lang__button--active">RU</button>
+              <button class="lang__button">EN</button>
+              <button class="lang__button">CH</button>
+          </div>
+      </div>
+    </aside>
   </body>
 </html>
