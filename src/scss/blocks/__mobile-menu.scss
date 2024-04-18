@@ -6,14 +6,16 @@
   .mobile-menu {
     width: 320px;
     min-height: 100vh;
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     overflow: visible;
     
-    box-shadow: 
-        16px 0 52px 0 #0E185033,
-        -2px 0 4px 0 #454F7E;
+    // box-shadow: 
+    //     16px 0 52px 0 #0E185033,
+    //     -2px 0 4px 0 #454F7E;
+    background-color: $whiteColor;
 
     display: flex;
     flex-direction: column;
