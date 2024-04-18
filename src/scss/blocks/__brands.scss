@@ -1,0 +1,129 @@
+.brands {
+  border-top: 1px solid $additionalColor;
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__header {
+    padding: $indentLeft;
+    background-image: linear-gradient(to right, $bgColor, $whiteColor);
+
+    @media (min-width: 768px) {
+      padding-left: $indentLeft768; 
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: $indentLeft1120;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $textLink;
+  }
+
+  &__slider {
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        margin: 6px;
+        background-color: #DDDDDD;
+
+        &.swiper-pagination-bullet-active {
+          background-color: #B5B6BC;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin: $indentLeft;
+
+    .menu-brand__item {
+      background-color: $whiteColor;
+      border: 1px solid $otherColor;
+      border-radius: 6px;
+    
+      max-width: 238px;
+      transition-duration: 1s;
+
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 1s;
+      }
+
+      @media (min-width: 768px) {
+        max-width: 222px;
+      }
+
+      @media (min-width: 1120px) {
+        max-width: 238px;
+      }
+
+      .menu-brand__link {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+      
+        background: url(/src/img/go.svg) 92% no-repeat;
+        min-height: 52px;
+        width: 206px;
+        padding: 10px 16px;
+        opacity: 1;
+
+        @media (min-width: 768px) {
+          width: 190px;
+        }
+
+        @media (min-width: 1120px) {
+          width: 206px;
+        }
+      }
+    } 
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+
+      column-gap: 24px;
+      row-gap: 16px;
+      margin: $indentLeft768;
+
+      .hide {
+        display: none;
+    }
+    }
+
+    @media (min-width: 1120px) {
+      column-gap: 32px;
+      margin: 24px $indentLeft1120;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+      // font-size: 16px;
+      border: 0;
+      padding: 0;
+      background: url('/src/img/expand.svg') $bgColor no-repeat left;
+      // line-height: 24px;
+      margin-left: $indentLeft768;
+      text-align: right;
+      width: 134px;
+
+      &--hide {
+        background: url('/src/img/expand2.svg') $bgColor no-repeat left;
+        width: 88px;
+      }
+    }
+
+    @media (min-width: 1120px) {
+      margin-left: $indentLeft1120;
+    }
+  }
+}
+
+
