@@ -1,0 +1,171 @@
+.mobile-menu{
+  display: none;
+}
+
+@media (min-width: 1120px) {
+  .mobile-menu {
+    width: 320px;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+    
+    box-shadow: 
+        16px 0 52px 0 #0E185033,
+        -2px 0 4px 0 #454F7E;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18.73px 24px;
+
+    &__logo {
+      margin-left: 16.73px;
+      flex-grow: 1;
+    }
+  }
+
+  .icon-button {
+    display: block;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    transition-duration: 1s;
+    transition-property: opacity;
+
+    &--burger {
+      background: url('/src/img/burger-active.svg') no-repeat center;
+    }
+    &--search {
+      background: url('/src/img/search.svg') no-repeat center;
+    }
+    
+    &--call {
+      background: url('/src/img/call.svg') no-repeat center;
+    }
+    &--chat {
+      background: url('/src/img/chat.svg') no-repeat center;
+    }
+    &--profile {
+      background: url('/src/img/profile.svg') no-repeat center;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+
+  .main-page {
+    flex-grow: 1;
+
+    &__main-menu {
+      margin-top: 2px;
+      padding-left: 24px;
+    }
+  }
+
+  .main-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    &__items--active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 4px;
+      height: 32px;
+      background-color: $accessoriesColor;
+      border-radius: 0 30px 30px 0;
+    }
+
+    &__link {
+      display: inline-block;
+      color: $text;
+      height: 30px;
+      width: 100%;
+      padding-top: 3px;
+      padding-bottom: 3px;
+
+      &--active {
+        color: #7E7E82;
+      }
+    }
+  }
+
+
+
+
+  .footer-menu {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 32px;
+
+    .contact__button-group {
+      margin-bottom: 16px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 16px;
+
+    }
+
+    .mail-link, .phone-link {
+      color: #1B1C21;
+    }
+
+    .contact__phone {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
+    &__lang {
+      margin-top: 40px;
+    }
+
+    .lang {
+      display: flex;
+      gap: 7px;
+
+      &__button {
+        display: block;
+        cursor:pointer;
+        width: 25px;
+        height: 24px;
+        border: none;
+        background-color: white;
+        font-weight: bold;
+        transition-duration: 1s;
+        transition-property: opacity;
+
+        &--active {
+          color: #7E7E82;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+
+
+
