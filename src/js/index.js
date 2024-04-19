@@ -32,16 +32,30 @@ swiperCard();
 window.addEventListener('resize', swiperCard);
 // ____________________________________________________________________________________
 
-const sections = Array.prototype.slice.call(document.querySelectorAll('.menu-brand__item'));
-const btn = document.querySelector('.container__button');
-let count;
+const sectionsBrand = Array.prototype.slice.call(document.querySelectorAll('.menu-brand__item'));
+const sectionsTechnic = Array.prototype.slice.call(document.querySelectorAll('.menu-technic__item'));
+const btnBrand = document.querySelector('.brand__button');
+const btnTechnic = document.querySelector('.technic__button');
+
+let countBrand;
+let countTechnic;
 let bool = true;
 let windowWidth = document.documentElement.clientWidth;
 
-function showHide(bool){
+function showHide(sections, bool){
+
   if(bool) {
     sections.forEach(function(section, index) {
-      if(index >= count) section.classList.add('hide');
+      switch (sections) {
+        case sectionsBrand: 
+          if(index >= countBrand) section.classList.add('hide');
+          console.log('бренд работает');
+          break;
+        case sectionsTechnic: 
+          if(index >= countTechnic) section.classList.add('hide');
+          console.log('техника работает');
+          break;
+      }
     });
   }else {
     sections.forEach(function(section) {
@@ -50,35 +64,53 @@ function showHide(bool){
   }
 }
 
-btn.addEventListener('click', function(e) {
-  bool = !bool;
-  showHide(bool);
-  if (!bool) {
-    btn.classList.add('container__button--hide');
-    btn.textContent = 'Скрыть';
-  } else {
-    btn.classList.remove('container__button--hide');
-    btn.textContent = 'Показать все';
-  }
-});
 
+function button(btn, sections) {
+  btn.addEventListener('click', function(e) {
+    bool = !bool;
+    showHide(sections, bool);
+    if (!bool) {
+      btn.classList.add('container__button--hide');
+      btn.textContent = 'Скрыть';
+    } else {
+      btn.classList.remove('container__button--hide');
+      btn.textContent = 'Показать все';
+    }
+  });
+}
+
+
+button(btnBrand, sectionsBrand);
+button(btnTechnic, sectionsTechnic);
 
 if(windowWidth >= 768 && windowWidth < 968) {
-  count = 6;
-  showHide(bool);
+  countBrand = 6;
+  countTechnic = 3;
+  showHide(sectionsBrand, bool);
+  showHide(sectionsTechnic, bool);
 } else if(windowWidth >= 968 && windowWidth < 1120) {
-  count = 8;
-  showHide(bool);
+  countBrand = 8;
+  countTechnic = 4;
+  showHide(sectionsBrand, bool);
+  showHide(sectionsTechnic, bool);
 } else if(windowWidth >= 1120 && windowWidth < 1376) {
-  count = 6;
-  showHide(bool);
+  countBrand = 6;
+  countTechnic = 3;
+  showHide(sectionsBrand, bool);
+  showHide(sectionsTechnic, bool);
 } else if(windowWidth >= 1376 && windowWidth < 1648) {
-  count = 8;
-  showHide(bool);
+  countBrand = 8;
+  countTechnic = 4;
+  showHide(sectionsBrand, bool);
+  showHide(sectionsTechnic, bool);
 } else if(windowWidth >= 1648 && windowWidth < 1920) {
-  count = 10;
-  showHide(bool);
+  countBrand = 10;
+  countTechnic = 5;
+  showHide(sectionsBrand, bool);
+  showHide(sectionsTechnic, bool);
 } else if(windowWidth >= 1920) {
-  count = 12;
-  showHide(bool);
+  countBrand = 12;
+  countTechnic = 6;
+  showHide(sectionsBrand, bool);
+  showHide(sectionsTechnic, bool);
 }
