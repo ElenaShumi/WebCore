@@ -10,9 +10,9 @@ function swiperCard() {
   if (document.documentElement.clientWidth < 768) {
     if (!init) {
       init = true;
-      swiper = new Swiper('.container__slider', {
+      swiper = new Swiper('.container-brand__slider', {
         modules: [Navigation, Pagination],
-        
+
         direction: 'horizontal',
         slidesPerView: 'auto',
         centeredSlides: false,

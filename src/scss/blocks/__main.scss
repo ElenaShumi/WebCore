@@ -1,6 +1,14 @@
 .main-page {
   min-width: 320px;
-  height: 509px;
+  margin-bottom: $indentBlockBottom;
+
+  @media (min-width: 768px) {
+    margin-bottom: $indentBlockBottom768;
+  }
+
+  @media (min-width: 1120px) {
+    margin-bottom: $indentBlockBottom1120;
+  }
 
   &__title {
     padding-left: $indentLeft;
