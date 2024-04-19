@@ -29,7 +29,7 @@
     color: $textLink;
   }
 
-  .container-brand__slider {
+  .container__slider {
     .swiper-pagination {
       position: static;
 
@@ -74,7 +74,7 @@
 
       @media (min-width: 1120px) {
         max-width: 238px;
-      }
+      } 
 
       .menu-brand__link,
       .menu-technic__link {
@@ -97,6 +97,18 @@
         }
       }
     } 
+
+    .menu-technic__item {
+      height: 158px;
+
+      .menu-technic__link {
+        height: 126px;
+        padding: 16px;
+        color: $text;
+        align-items: flex-start; 
+        background-position-y: 87%;
+      }
+    }
 
     @media (min-width: 768px) {
       flex-wrap: wrap;
