@@ -1,0 +1,41 @@
+@media (min-width: 768px) {
+  .container__table {
+    margin: $indentLeft768;
+  }
+
+  .table {
+    display: table;	
+    // width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border-radius: 10px;
+
+    &:not(:first-of-type) {
+      background-color: $whiteColor;
+    }
+
+    &__tr {
+      display: table-row;
+
+      &:first-child {
+        color: $textLink;
+        >.table__td {
+          background-color: $bgColor;
+        }
+      }
+
+      
+      
+    }
+
+    &__td {
+      display: table-cell;	
+      // width: 33.3%;
+      vertical-align: top;
+      padding: 0;
+
+      
+    }
+  }
+}
