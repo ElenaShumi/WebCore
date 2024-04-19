@@ -1,4 +1,7 @@
 import '../scss/style.scss'
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper from 'swiper/bundle';
 
 let init = false;
 let swiper;
@@ -7,7 +10,9 @@ function swiperCard() {
   if (document.documentElement.clientWidth < 768) {
     if (!init) {
       init = true;
-      swiper = new Swiper('.brands__slider', {
+      swiper = new Swiper('.container__slider', {
+        modules: [Navigation, Pagination],
+        
         direction: 'horizontal',
         slidesPerView: 'auto',
         centeredSlides: false,
@@ -28,7 +33,7 @@ window.addEventListener('resize', swiperCard);
 // ____________________________________________________________________________________
 
 const sections = Array.prototype.slice.call(document.querySelectorAll('.menu-brand__item'));
-const btn = document.querySelector('.brands__button');
+const btn = document.querySelector('.container__button');
 let count;
 let bool = true;
 let windowWidth = document.documentElement.clientWidth;
@@ -49,10 +54,10 @@ btn.addEventListener('click', function(e) {
   bool = !bool;
   showHide(bool);
   if (!bool) {
-    btn.classList.add('brands__button--hide');
+    btn.classList.add('container__button--hide');
     btn.textContent = 'Скрыть';
   } else {
-    btn.classList.remove('brands__button--hide');
+    btn.classList.remove('container__button--hide');
     btn.textContent = 'Показать все';
   }
 });
