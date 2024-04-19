@@ -69,10 +69,16 @@ if(windowWidth >= 768 && windowWidth < 968) {
 } else if(windowWidth >= 968 && windowWidth < 1120) {
   count = 8;
   showHide(bool);
-} else if(windowWidth >= 1120 && windowWidth < 1328) {
+} else if(windowWidth >= 1120 && windowWidth < 1376) {
+  count = 6;
+  showHide(bool);
+} else if(windowWidth >= 1376 && windowWidth < 1648) {
   count = 8;
   showHide(bool);
-} else if(windowWidth >= 1328) {
+} else if(windowWidth >= 1648 && windowWidth < 1920) {
   count = 10;
+  showHide(bool);
+} else if(windowWidth >= 1920) {
+  count = 12;
   showHide(bool);
 }
