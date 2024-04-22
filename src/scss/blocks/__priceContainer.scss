@@ -1,20 +1,19 @@
 .container.price {
   margin-left: $indentLeft;
-  // margin-right: $indentLeft;
 
   @media (min-width: 768px) {
     margin-left: $indentLeft768;
-    // margin-right: $indentLeft768;
   }
 
   @media (min-width: 1120px) {
     margin-left: $indentLeft1120;
-    // margin-right: $indentLeft1120;
   }
   .container__header {
     padding-left: 0;
   }
-
+  .swiper-pagination {
+    margin-top: 16px;
+  }
 }
 
 .conteiner__text {
@@ -58,7 +57,7 @@
     background-color: $whiteColor;
     border: 1px solid $otherColor;
     border-radius: 6px;
-    min-width: 226px;
+    width: 226px;
     height: 166px;
     padding: 16px;
 
@@ -83,14 +82,12 @@
         }
       }
     }
-
-    
   }
 
   &__td {
-    
     font-size: 14px;
     line-height: 18px;
+
 
     
     &:first-child {
@@ -101,6 +98,10 @@
         content: 'Ремонтные услуги';
         color: $textLink;
         line-height: 16px;
+        
+        @media (min-width: 768px) {
+          content: none;
+        }
       }
     }
 
@@ -112,12 +113,21 @@
         content: 'Цена';
         color: $textLink;
         line-height: 16px;
+
+        @media (min-width: 768px) {
+          content: none;
+        }
       }
     }
+
     &:nth-child(3)::before {
       content: 'Срок';
       color: $textLink;
       line-height: 16px;
+
+      @media (min-width: 768px) {
+        content: none;
+      }
     }
 
     @media (min-width: 768px) {
