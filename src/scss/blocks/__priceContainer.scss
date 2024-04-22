@@ -1,12 +1,15 @@
 .container.price {
   margin-left: $indentLeft;
+  // margin-right: $indentLeft;
 
   @media (min-width: 768px) {
     margin-left: $indentLeft768;
+    // margin-right: $indentLeft768;
   }
 
   @media (min-width: 1120px) {
     margin-left: $indentLeft1120;
+    // margin-right: $indentLeft1120;
   }
   .container__header {
     padding-left: 0;
@@ -14,59 +17,130 @@
 
 }
 
-  .conteiner__text {
-    margin-top: 16px;
-
-    @media (min-width: 768px) {
-      display: inline-block;
-      margin-top: $indentBlockBottom;
-      margin-bottom: 16px;
-
-      width: 421px;
-    }
-  }
-
-  .container__link {
-    display: inline-block;
-    color: $text;
-    font-weight: 600;
-    width: 316px;
-
-    background: url('/src/img/Line.svg') 100% no-repeat;
-  }
-  
+.conteiner__text {
+  margin-top: 16px;
 
   @media (min-width: 768px) {
-  .table {
+    display: inline-block;
+    margin-top: $indentBlockBottom;
+    margin-bottom: 16px;
+
+    width: 421px;
+  }
+}
+
+.container__link {
+  display: inline-block;
+  color: $text;
+  font-weight: 600;
+  width: 316px;
+
+  background: url('/src/img/Line.svg') 100% no-repeat;
+}
+
+.table {
+  display: flex;
+
+  @media (min-width: 768px) {
     display: table;	
-    width: 100%;
+    margin-right: $indentLeft768;
+    width: 97%;
     border: none;
     border-collapse: separate;
-    border-spacing: 5px;
     border-radius: 10px;
 
     &:not(:first-of-type) {
       background-color: $whiteColor;
     }
+  }
 
-    &__tr {
+  &__tr {
+    background-color: $whiteColor;
+    border: 1px solid $otherColor;
+    border-radius: 6px;
+    min-width: 226px;
+    height: 166px;
+    padding: 16px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+       
+
+    @media (min-width: 768px) {
       display: table-row;
+      height: 64px;
+    }
 
-      &:first-child {
+    &:first-child {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: table-row;
         color: $textLink;
+        line-height: 16px;
         >.table__td {
           background-color: $bgColor;
         }
       }
     }
 
-    &__td {
-      display: table-cell;	
-      // width: 33.3%;
+    
+  }
+
+  &__td {
+    
+    font-size: 14px;
+    line-height: 18px;
+
+    
+    &:first-child {
+      grid-column: 1 / -1;
+      grid-row: 1;
+
+      &::before {
+        content: 'Ремонтные услуги';
+        color: $textLink;
+        line-height: 16px;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+
+      &::before {
+        content: 'Цена';
+        color: $textLink;
+        line-height: 16px;
+      }
+    }
+    &:nth-child(3)::before {
+      content: 'Срок';
+      color: $textLink;
+      line-height: 16px;
+    }
+
+    @media (min-width: 768px) {
+      display: table-cell;
       vertical-align: top;
-      padding: 0;    
+      padding: 0; 
     }
   }
+
+  &__button {
+    height: 32px;
+    width: 119px;
+    border: 5px solid $buttonColor;
+    border-radius: 25px;
+    background: #FF3E79 url('/src/img/goside.svg') 96% no-repeat;
+
+    color: $whiteColor;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 550;
+    text-align: start;
+  }
 }
+  
 
 
