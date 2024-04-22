@@ -1,11 +1,45 @@
-@media (min-width: 768px) {
-  .container__table {
-    margin: $indentLeft768;
+.container.price {
+  margin-left: $indentLeft;
+
+  @media (min-width: 768px) {
+    margin-left: $indentLeft768;
   }
 
+  @media (min-width: 1120px) {
+    margin-left: $indentLeft1120;
+  }
+  .container__header {
+    padding-left: 0;
+  }
+
+}
+
+  .conteiner__text {
+    margin-top: 16px;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      margin-top: $indentBlockBottom;
+      margin-bottom: 16px;
+
+      width: 421px;
+    }
+  }
+
+  .container__link {
+    display: inline-block;
+    color: $text;
+    font-weight: 500;
+    width: 316px;
+
+    background: url('/src/img/Line.svg') 100% no-repeat;
+  }
+  
+
+  @media (min-width: 768px) {
   .table {
     display: table;	
-    // width: 100%;
+    width: 100%;
     border: none;
     border-collapse: separate;
     border-spacing: 5px;
@@ -24,18 +58,15 @@
           background-color: $bgColor;
         }
       }
-
-      
-      
     }
 
     &__td {
       display: table-cell;	
       // width: 33.3%;
       vertical-align: top;
-      padding: 0;
-
-      
+      padding: 0;    
     }
   }
 }
+
+
