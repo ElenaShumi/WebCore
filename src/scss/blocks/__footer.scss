@@ -1,0 +1,38 @@
+.footer {
+  color: $textLink;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  margin-left: $indentLeft;
+  margin-right: $indentLeft;
+
+  border-top: 1px solid $additionalColor;
+
+  @media (min-width: 768px) {
+    margin-left: $indentLeft768;
+    margin-right: $indentLeft768;
+    padding-top: $indentBlockBottom768;
+    
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+
+    &>p {
+      width: 218px;
+
+      &:last-child {
+        text-align: end;
+
+        @media (min-width: 1120px) {
+          width: 330px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1120px) {
+    margin-left: $indentLeft1120;
+    margin-right: $indentLeft1120;
+  }
+}

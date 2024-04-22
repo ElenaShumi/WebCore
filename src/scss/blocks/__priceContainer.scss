@@ -16,11 +16,12 @@
   }
 }
 
-.conteiner__text {
+.container__text {
   margin-top: 16px;
+  font-size: 14px;
 
   @media (min-width: 768px) {
-    display: inline-block;
+    display: block;
     margin-top: $indentBlockBottom;
     margin-bottom: 16px;
 
@@ -46,7 +47,7 @@
     width: 97%;
     border: none;
     border-collapse: separate;
-    border-radius: 10px;
+    border-radius: 0 0 25px 25px;
 
     &:not(:first-of-type) {
       background-color: $whiteColor;
@@ -62,8 +63,7 @@
     padding: 16px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-       
+    grid-template-columns: 1fr 1fr;     
 
     @media (min-width: 768px) {
       display: table-row;
@@ -87,9 +87,7 @@
   &__td {
     font-size: 14px;
     line-height: 18px;
-
-
-    
+   
     &:first-child {
       grid-column: 1 / -1;
       grid-row: 1;
@@ -132,8 +130,12 @@
 
     @media (min-width: 768px) {
       display: table-cell;
-      vertical-align: top;
-      padding: 0; 
+      vertical-align: middle;
+      padding-left: $indentLeft; 
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: $indentLeft768; 
     }
   }
 
