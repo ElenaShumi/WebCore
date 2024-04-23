@@ -10,6 +10,18 @@
   }
 }
 
+.call {
+  display: none;
+  position: absolute;
+  top: 0;
+
+  z-index: 15;
+
+  @media (min-width: 1120px) {
+    right: 0;
+  }
+}
+
 .modal {
   width: 100%;
   height: 100%;
