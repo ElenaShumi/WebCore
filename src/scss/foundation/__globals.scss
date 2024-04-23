@@ -28,6 +28,10 @@ body {
       grid-row: 1 / -1;
     }
 
+    .feedback {
+      grid-column-start: 2;
+    }
+
     .footer {
       grid-column-start: 2;
     }
