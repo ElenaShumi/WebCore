@@ -1,5 +1,6 @@
 import '../scss/style.scss'
 import './buttonShowAll'
+import './menu';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 // import Swiper from 'swiper/bundle';

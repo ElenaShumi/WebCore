@@ -41,11 +41,18 @@
 
     .button {
       display: block;
+      cursor: pointer;
       border: 0;
       background-color: white;
       padding: 0;
       width: 40px;
       height: 40px;
+      transition-duration: 1s;
+      transition-property: opacity;
+
+      &:hover {
+        opacity: 0.5;
+      }
 
       &--burger {
         background: url('/src/img/burger.svg') no-repeat center;
