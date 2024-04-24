@@ -35,7 +35,7 @@
   font-weight: 600;
   width: 316px;
 
-  background: url('/src/img/Line.svg') 100% no-repeat;
+  background: url('../img/Line.svg') 100% no-repeat;
 }
 
 .table {
@@ -144,7 +144,7 @@
     width: 119px;
     border: 5px solid $buttonColor;
     border-radius: 25px;
-    background: #FF3E79 url('/src/img/goside.svg') 96% no-repeat;
+    background: #FF3E79 url('../img/goside.svg') 96% no-repeat;
 
     color: $whiteColor;
     text-transform: uppercase;

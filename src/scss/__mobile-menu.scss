@@ -67,24 +67,24 @@ body.lock {
       transition-property: opacity;
   
       &--burger {
-        background: url('/src/img/burger-active.svg') no-repeat center;
+        background: url('../img/burger-active.svg') no-repeat center;
 
         @media (min-width: 1120px) {
           display: none;
         }
       }
       &--search {
-        background: url('/src/img/search.svg') no-repeat center;
+        background: url('../img/search.svg') no-repeat center;
       }
       
       &--call {
-        background: url('/src/img/call.svg') no-repeat center;
+        background: url('../img/call.svg') no-repeat center;
       }
       &--chat {
-        background: url('/src/img/chat.svg') no-repeat center;
+        background: url('../img/chat.svg') no-repeat center;
       }
       &--profile {
-        background: url('/src/img/profile.svg') no-repeat center;
+        background: url('../img/profile.svg') no-repeat center;
       }
   
       &:hover {

@@ -1,16 +1,16 @@
 @import 
-  'foundation/_normalize',
-  'foundation/_variables',
-  'foundation/_globals';
+  '_normalize',
+  '_variables',
+  '_globals';
 
 @import 
-  'blocks/_header',
-  'blocks/_main',
-  'blocks/_container',
-  'blocks/_priceContainer',
-  'blocks/_mobile-menu',
-  'blocks/_modal',
-  'blocks/_footer';
+  '_header',
+  '_main',
+  '_container',
+  '_priceContainer',
+  '_mobile-menu',
+  '_modal',
+  '_footer';
 
-@import '/node_modules/swiper/swiper-bundle.css';
-@import '/src/fonts/stylesheet.css';
+@import '../../node_modules/swiper/swiper-bundle.css';
+@import '../fonts/stylesheet.css';

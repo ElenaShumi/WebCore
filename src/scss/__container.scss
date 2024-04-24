@@ -82,7 +82,7 @@
         justify-content: space-between; 
         align-items: center; 
       
-        background: url(/src/img/go.svg) 92% no-repeat;
+        background: url(../img/go.svg) 92% no-repeat;
         min-height: 52px;
         width: 206px;
         padding: 10px 16px;
@@ -136,14 +136,14 @@
       // font-size: 16px;
       border: 0;
       padding: 0;
-      background: url('/src/img/expand.svg') $bgColor no-repeat left;
+      background: url('../img/expand.svg') $bgColor no-repeat left;
       // line-height: 24px;
       margin-left: $indentLeft768;
       text-align: right;
       width: 134px;
 
       &--hide {
-        background: url('/src/img/expand2.svg') $bgColor no-repeat left;
+        background: url('../img/expand2.svg') $bgColor no-repeat left;
         width: 88px;
       }
     }
