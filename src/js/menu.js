@@ -1,6 +1,6 @@
 const btnMenu = document.querySelector('.button--burger');
 const mobileMenu = document.querySelector('.mobile-menu');
-const btnMenuClose = mobileMenu.querySelector('.icon-button--burger');
+const btnMenuClose = mobileMenu.querySelector('.icon-button--close');
 const body = document.querySelector('body');
 
 btnMenu.addEventListener('click', function(evt) {
