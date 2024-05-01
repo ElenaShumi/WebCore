@@ -30,6 +30,15 @@
   }
 
   .container__slider {
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        width: 24px;
+        background-image: linear-gradient(to right, rgba(248, 248, 248, 0.01%), rgba(248, 248, 248, 100%));
+      }
+
     .swiper-pagination {
       position: static;
 
@@ -154,4 +163,29 @@
   }
 }
 
+.brand {
+  .container__slider {
+    &::after {
+      top: 673px;
+      height: 81px;
+    }
+  }
+}
 
+.technic {
+  .container__slider {
+    &::after {
+      top: 890px;
+      height: 166px;
+    }
+  }
+}
+
+.price {
+  .container__slider {
+    &::after {
+      top: 1178px;
+      height: 200px;
+    }
+  }
+}

@@ -51,3 +51,20 @@ btnCallClose.addEventListener('click', function(evt) {
   mobileMenu.style.opacity = '1';
   body.classList.remove('lock');
 })
+
+
+// modalFeedback.addEventListener('click', function(evt) {
+//   if (evt.target === modalFeedback) {
+//     modalFeedback.style.display = 'none'
+//     mobileMenu.style.opacity = '1';
+//     body.classList.remove('lock');
+//   }
+// })
+
+// modalCall.addEventListener('click', (e) => {
+//   if (e.target === modalCall) {
+//     modalCall.style.display = 'none'
+//     mobileMenu.style.opacity = '1';
+//     body.classList.remove('lock');
+//   }
+// });
