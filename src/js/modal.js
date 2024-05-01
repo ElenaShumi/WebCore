@@ -28,7 +28,11 @@ btnModalClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   modalFeedback.style.display = 'none'
   mobileMenu.style.opacity = '1';
-  body.classList.remove('lock');
+
+  if (mobileMenu.style.display === 'none') {
+    body.classList.remove('lock');
+    console.log('мобильное меню закрыто')
+  } 
 })
 
 btnCall.addEventListener('click', function(evt) {
@@ -49,7 +53,11 @@ btnCallClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   modalCall.style.display = 'none'
   mobileMenu.style.opacity = '1';
-  body.classList.remove('lock');
+  
+  if (mobileMenu.style.display === 'none') {
+    body.classList.remove('lock');
+    console.log('мобильное меню закрыто')
+  } 
 })
 
 
