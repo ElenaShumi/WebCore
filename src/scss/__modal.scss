@@ -1,6 +1,6 @@
 .feedback {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
 
   z-index: 15;
@@ -12,7 +12,7 @@
 
 .call {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
 
   z-index: 15;
