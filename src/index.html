@@ -353,13 +353,11 @@
             <h2>Обратная связь</h2>
         </div>
         <form class="modal__form form" action="" method="post">
-            <input type="text" name="name" placeholder="Имя"><br>
-            <input type="text" name="phone" placeholder="Телефон"><br>
-            <input type="text" name="email" placeholder="Электронная почта"><br>
+            <input type="text" name="name" placeholder="Имя" required><br>
+            <input type="tel" name="phone" placeholder="Телефон" required pattern="[0-9]{11}" title="Должно быть 11 цифер"><br>
+            <input type="email" name="email" placeholder="Электронная почта" required pattern="^\S+@\S+\.\S+$" title="Указанный формат: user@example.com"><br>
             <textarea name="commens" rows="4" placeholder="Сообщение"></textarea><br>
-            <button class="form__button" type="button">
-                <span>Отправить</span>
-            </button>
+            <input class="form__btn" type="submit" value="Отправить">
         </form>
         <p class="modal__text">Нажимая “отправить”, вы даете согласие на 
             <a href="#">обработку персональных данных</a> 
@@ -375,10 +373,8 @@
             <h2>Заказать звонок</h2>
         </div>
         <form class="modal__form form" action="" method="post">
-            <input type="text" name="phone" placeholder="Телефон"><br>
-            <button class="form__button" type="button">
-                <span>Отправить</span>
-            </button>
+            <input type="tel" name="phone" placeholder="Телефон" required pattern="[0-9]{11}" title="Должно быть 11 цифер"><br>
+            <input class="form__btn" type="submit" value="Отправить">
         </form>
         <p class="modal__text">Нажимая “отправить”, вы даете согласие на 
             <a href="#">обработку персональных данных</a> 
