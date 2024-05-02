@@ -1815,6 +1815,13 @@ body {
       overflow-y: hidden;
       padding: 0;
       margin: 0; }
+      .main-page__menu .slide-menu::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 24px;
+        height: 40px;
+        background-image: linear-gradient(to right, rgba(248, 248, 248, 0.01), #f8f8f8); }
       .main-page__menu .slide-menu__items {
         flex-shrink: 0;
         flex-basis: auto; }
@@ -1936,6 +1943,13 @@ body {
   .container__title {
     text-transform: uppercase;
     color: #7E7E82; }
+  .container .container__slider::after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    width: 24px;
+    background-image: linear-gradient(to right, rgba(248, 248, 248, 0.01), #f8f8f8); }
   .container .container__slider .swiper-pagination {
     position: static; }
     @media (min-width: 768px) {
@@ -2034,6 +2048,18 @@ body {
       .container__button {
         margin-left: 32px; } }
 
+.brand .container__slider::after {
+  top: 673px;
+  height: 81px; }
+
+.technic .container__slider::after {
+  top: 890px;
+  height: 166px; }
+
+.price .container__slider::after {
+  top: 1178px;
+  height: 200px; }
+
 .container.price {
   margin-left: 16px; }
   @media (min-width: 768px) {
@@ -2084,11 +2110,20 @@ body {
     height: 166px;
     padding: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer; }
+    .table__tr:hover {
+      transform: scale(1.1);
+      transition-duration: 1s; }
     @media (min-width: 768px) {
       .table__tr {
         display: table-row;
-        height: 64px; } }
+        height: 64px; }
+        .table__tr:hover {
+          transform: scale(1);
+          background-color: #FF3E79;
+          transition-duration: 1s;
+          color: #FFFFFF; } }
     .table__tr:first-child {
       display: none; }
       @media (min-width: 768px) {
@@ -2154,9 +2189,8 @@ body.lock {
     content: '';
     position: absolute;
     top: 0;
-    right: -100px;
     width: 3000px;
-    height: 100%;
+    height: 3000px;
     background-color: #FFFFFF;
     z-index: 5;
     opacity: 0.95; }
@@ -2200,10 +2234,10 @@ body.lock {
     height: 40px;
     transition-duration: 1s;
     transition-property: opacity; }
-    .mobile-menu .icon-button--burger {
+    .mobile-menu .icon-button--close {
       background: url(./static/burger-active.svg) no-repeat center; }
       @media (min-width: 1120px) {
-        .mobile-menu .icon-button--burger {
+        .mobile-menu .icon-button--close {
           display: none; } }
     .mobile-menu .icon-button--search {
       background: url(./static/search.svg) no-repeat center; }
@@ -2281,7 +2315,7 @@ body.lock {
 
 .feedback {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 15; }
   @media (min-width: 1120px) {
@@ -2290,7 +2324,7 @@ body.lock {
 
 .call {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 15; }
   @media (min-width: 1120px) {
@@ -2326,7 +2360,7 @@ body.lock {
     transition-property: opacity; }
     .modal .icon-button:hover {
       opacity: 0.5; }
-    .modal .icon-button--burger {
+    .modal .icon-button--close {
       background: url(./static/burger-active.svg) no-repeat center; }
   .modal__title {
     margin-top: 40px;
@@ -2361,18 +2395,48 @@ body.lock {
       font-size: 16px;
       line-height: 24px;
       color: #B5B6BC; }
+      .modal__form > input.form__btn,
+      .modal__form > textarea.form__btn {
+        padding: 0;
+        padding-left: 10px; }
+      .modal__form > input:invalid,
+      .modal__form > textarea:invalid {
+        border: 1px solid #FF3E79; }
   .modal__text {
+    margin: 0;
+    width: 90%;
     font-size: 14px;
     line-height: 16px;
     color: #7E7E82; }
     .modal__text > a {
       color: #FF3E79; }
-  .modal .table__button {
+  .modal .form__btn {
+    cursor: pointer;
+    opacity: 1;
+    transition-duration: 1s;
+    transition-property: opacity;
     position: absolute;
-    right: 16px; }
+    right: 14%;
+    margin-top: 83px;
+    height: 32px;
+    width: 136px;
+    border: 5px solid #FF3E79;
+    border-radius: 25px;
+    background: #FF3E79 url(./static/goside.svg) 96% no-repeat;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 550;
+    text-align: start;
+    vertical-align: top; }
     @media (min-width: 1120px) {
-      .modal .table__button {
-        right: 32px; } }
+      .modal .form__btn {
+        right: 32px;
+        margin-top: 71px; } }
+    .modal .form__btn:hover {
+      opacity: 0.5;
+      transition-duration: 1s;
+      transition-property: opacity; }
 
 .footer {
   color: #7E7E82;

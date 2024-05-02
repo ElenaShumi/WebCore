@@ -282,7 +282,7 @@
     <aside class="mobile-menu">
       <div class="header-menu">
           <div class="header-menu__button">
-              <button class="icon-button icon-button--burger"></button>
+              <button class="icon-button icon-button--close"></button>
           </div>
           <div class="header-menu__logo">
               <a href="#"><img src="img/Group.svg" alt="Логотип"></a>
@@ -344,44 +344,40 @@
     </aside>
     <aside class="modal feedback">
         <div class="modal__button">
-            <button class="icon-button icon-button--burger"></button>
+            <button class="icon-button icon-button--close"></button>
         </div>
         <div class="modal__title">
             <h2>Обратная связь</h2>
         </div>
         <form class="modal__form form" action="" method="post">
-            <input type="text" name="name" placeholder="Имя"><br>
-            <input type="text" name="phone" placeholder="Телефон"><br>
-            <input type="text" name="email" placeholder="Электронная почта"><br>
+            <input type="text" name="name" placeholder="Имя" required><br>
+            <input type="tel" name="phone" placeholder="Телефон" required pattern="[0-9]{11}" title="Должно быть 11 цифер"><br>
+            <input type="email" name="email" placeholder="Электронная почта" required pattern="^\S+@\S+\.\S+$" title="Указанный формат: user@example.com"><br>
             <textarea name="commens" rows="4" placeholder="Сообщение"></textarea><br>
+            <input class="form__btn" type="submit" value="Отправить">
         </form>
         <p class="modal__text">Нажимая “отправить”, вы даете согласие на 
-            <a src="#">обработку персональных данных</a> 
+            <a href="#">обработку персональных данных</a> 
             и соглашаетесь с нашей 
-            <a src="#">политикой конфиденциальности</a>
+            <a href="#">политикой конфиденциальности</a>
         </p>
-        <button class="table__button" type="button">
-            <span>Отправить</span>
-        </button>
     </aside>
     <aside class="modal call">
         <div class="modal__button">
-            <button class="icon-button icon-button--burger"></button>
+            <button class="icon-button icon-button--close"></button>
         </div>
         <div class="modal__title">
             <h2>Заказать звонок</h2>
         </div>
         <form class="modal__form form" action="" method="post">
-            <input type="text" name="phone" placeholder="Телефон"><br>
+            <input type="tel" name="phone" placeholder="Телефон" required pattern="[0-9]{11}" title="Должно быть 11 цифер"><br>
+            <input class="form__btn" type="submit" value="Отправить">
         </form>
         <p class="modal__text">Нажимая “отправить”, вы даете согласие на 
-            <a src="#">обработку персональных данных</a> 
+            <a href="#">обработку персональных данных</a> 
             и соглашаетесь с нашей 
-            <a src="#">политикой конфиденциальности</a>
+            <a href="#">политикой конфиденциальности</a>
         </p>
-        <button class="table__button" type="button">
-            <span>Отправить</span>
-        </button>
     </aside>
     <footer class="footer">
         <p>© 2019 CPS<br> Разработано командой Apesong </p>
