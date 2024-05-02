@@ -4,11 +4,14 @@ const modalFeedback = document.querySelector('.feedback');
 const btnModalClose = modalFeedback.querySelector('.icon-button--close');
 const body = document.querySelector('body');
 const mobileMenu = document.querySelector('.mobile-menu');
+let mobileMenuStyle = getComputedStyle(mobileMenu);
 
 const btnCall = document.querySelector('.icon-button--call');
 const btnCallHead = document.querySelector('.button--call');
 const modalCall = document.querySelector('.call');
 const btnCallClose = modalCall.querySelector('.icon-button--close');
+
+let windowWidth = document.documentElement.clientWidth;
 
 btnChat.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -26,13 +29,14 @@ btnChatHead.addEventListener('click', function(evt) {
 
 btnModalClose.addEventListener('click', function(evt) {
   evt.preventDefault();
-  modalFeedback.style.display = 'none'
+  modalFeedback.style.display = 'none';
   mobileMenu.style.opacity = '1';
 
-  if (mobileMenu.style.display === 'none') {
+  if (mobileMenu.style.display === 'none' || windowWidth >= 1120) {
     body.classList.remove('lock');
-    console.log('мобильное меню закрыто')
-  } 
+  } else if (mobileMenuStyle.display === 'none' && windowWidth < 1120) {
+    body.classList.remove('lock');
+  }
 })
 
 btnCall.addEventListener('click', function(evt) {
@@ -53,26 +57,28 @@ btnCallClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   modalCall.style.display = 'none'
   mobileMenu.style.opacity = '1';
-  
-  if (mobileMenu.style.display === 'none') {
+
+  if (mobileMenu.style.display === 'none' || windowWidth >= 1120) {
     body.classList.remove('lock');
-    console.log('мобильное меню закрыто')
-  } 
+  } else if (mobileMenuStyle.display === 'none' && windowWidth < 1120) {
+    body.classList.remove('lock');
+  }
 })
 
+let observer = new MutationObserver(mutationRecords => {
+  if (body.classList.contains('lock') && windowWidth >= 1120) {
+    const bodyLock = document.querySelector('.lock');
 
-// modalFeedback.addEventListener('click', function(evt) {
-//   if (evt.target === modalFeedback) {
-//     modalFeedback.style.display = 'none'
-//     mobileMenu.style.opacity = '1';
-//     body.classList.remove('lock');
-//   }
-// })
+    bodyLock.addEventListener('click', function(evt) {
+      if (evt.target === bodyLock) {
+        modalFeedback.style.display = 'none';
+        modalCall.style.display = 'none';
+        mobileMenu.style.opacity = '1';
+        body.classList.remove('lock');
+      }
+    });
+  }
+});
 
-// modalCall.addEventListener('click', (e) => {
-//   if (e.target === modalCall) {
-//     modalCall.style.display = 'none'
-//     mobileMenu.style.opacity = '1';
-//     body.classList.remove('lock');
-//   }
-// });
+observer.observe(body, {attributes: true})
+
