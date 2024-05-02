@@ -63,11 +63,24 @@
     padding: 16px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;     
+    grid-template-columns: 1fr 1fr;
+
+    cursor: pointer;
+    
+    &:hover {
+      transform: scale(1.1);
+      transition-duration: 1s;
+    }
 
     @media (min-width: 768px) {
       display: table-row;
       height: 64px;
+      &:hover {
+        transform: scale(1);
+        background-color: $buttonColor;
+        transition-duration: 1s;
+        color: $whiteColor;
+      }
     }
 
     &:first-child {
